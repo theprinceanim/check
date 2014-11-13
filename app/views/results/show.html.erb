@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subject code:</strong>
+  <%= @result.subject_code %>
+</p>
+
+<p>
+  <strong>Subject name:</strong>
+  <%= @result.subject_name %>
+</p>
+
+<p>
+  <strong>Mark:</strong>
+  <%= @result.mark %>
+</p>
+
+<%= link_to 'Edit', edit_result_path(@result) %> |
+<%= link_to 'Back', results_path %>
