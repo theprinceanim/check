@@ -11,28 +11,36 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :exams_number %><br>
-    <%= f.text_field :exams_number %>
+  <div class="container">
+
+  
+
+  <div class="form-group">
+    
+    <%= f.text_field :exams_number, class: 'form-control', placeholder: 'Exams Number' %>
   </div>
-  <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
+  <div class="form-group">
+    
+    <%= f.text_field :last_name , class: 'form-control', placeholder: 'Last Name'%>
   </div>
-  <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
+  <div class="form-group">
+   
+    <%= f.text_field :first_name, class: 'form-control', placeholder: 'First Name' %>
   </div>
   
-  <div>
-    <%= f.label :username %><br>
-    <%= f.text_field :username %><br>
+  <div class="form-group">
+    
+    <%= f.text_field :username, class: 'form-control', placeholder: 'Username' %><br>
   </div>
-  <div>
-    <%= f.label :password %><br>
-    <%= f.text_field :password %>
+  <div class="form-group">
+    <%= f.text_field :password, class: 'form-control', placeholder: 'Password' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit", :class => 'btn btn-primary block btn-lg' %>
   </div>
 <% end %>
+
+
+</div>
+
+

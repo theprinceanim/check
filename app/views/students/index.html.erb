@@ -1,20 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Students</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Exams number</th>
-      <th>Last name</th>
-      <th>First name</th>
-      <th>Username</th>
-      <th>Password</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="container">
+  <div class="row">
+    <center>
+    <div class="col-xs-10">
 
-  <tbody>
+
+
+<h1>List of Students</h1>
+<table class="rwd-table">
+  <tr>
+    <th>Exams Number</th>
+    <th>Last Name</th>
+    <th>First Name</th>
+    <th>Username</th>
+    <th>Password</th>
+    <th colspan="3"></th>
+  </tr>
+
+   <tbody>
     <% @students.each do |student| %>
       <tr>
         <td><%= student.exams_number %></td>
@@ -22,15 +27,27 @@
         <td><%= student.first_name %></td>
         <td><%= student.username %></td>
         <td><%= student.password %></td>
-        <td><%= link_to 'Results', results_path(student) %></td>
-        <td><%= link_to 'Show', student %></td>
-        <td><%= link_to 'Edit', edit_student_path(student) %></td>
-        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <!-- <td><%= link_to 'Results', results_path(student) %></td> -->
+        <td><%= link_to 'View', student %></td>
+        <td><%= link_to 'Update', edit_student_path(student) %></td>
+        <td><%= link_to 'Delete', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Student', new_student_path %>
+
+</div>
+</center>
+  <div class="col-xs-2">
+    <button type="button" class="btn btn-default btn-lg">
+  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> <%= link_to 'New Student', new_student_path %>
+</button>
+  </div>
+</div>
+</div>
+
+  
+
+

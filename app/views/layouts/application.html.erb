@@ -7,8 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        
+      <%= image_tag("admin.png", size: "54") %>Administrator
+
+      
+
+    </div>
+  </div>
+</nav>
+
 
 <%= yield %>
+
 
 </body>
 </html>
