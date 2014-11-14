@@ -2,25 +2,25 @@
 <div class="container">
 <div class="row">
 <div class="col-xs-4">
-
-</div>
-<div class="col-xs-4" style="color:#34495E;">
 <p id="notice"><%= notice %></p>
 
+<h1><%= @student.last_name %>
+  <%= @student.first_name %></h1>
 <p>
   <strong>Exams number:</strong>
   <%= @student.exams_number %>
 </p>
 
-<p>
-  <strong>Last name:</strong>
+<!-- <p>
+  <strong>Name:</strong>
   <%= @student.last_name %>
-</p>
+  <%= @student.first_name %>
+</p> -->
 
-<p>
+<!-- <p>
   <strong>First name:</strong>
   <%= @student.first_name %>
-</p>
+</p> -->
 
 
 <p>
@@ -34,7 +34,12 @@
 </p>
 
 <%= link_to 'Update', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>
+<%= link_to 'Back', students_path %> |
+<%= link_to 'Create another student', new_student_path %>
+
+</div>
+<div class="col-xs-4" style="color:#34495E;">
+
 </div>
 
 <div class="col-xs-4"></div>

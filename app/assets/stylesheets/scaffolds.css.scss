@@ -18,16 +18,24 @@ pre {
   font-size: 11px;
 }
 
-a {
-  color: #000;
-  &:visited {
-    color: #666;
-  }
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
+a:link { /* Essentially means a[href], or that the link actually goes somewhere */
+  color: #3A3232;
 }
+a:visited {
+  color: #F07848;
+}
+a:hover {
+  color: green;
+}
+
+a { 
+  position: relative;
+}
+a:active {
+  top: 1px;
+   color: red;
+}
+
 
 div {
   &.field, &.actions {
@@ -36,7 +44,7 @@ div {
 }
 
 #notice {
-  color: green;
+  color: #941F1F;
 }
 
 .field_with_errors {

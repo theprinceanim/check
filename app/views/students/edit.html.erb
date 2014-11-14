@@ -1,8 +1,27 @@
-<center>
-<h1>Editing Student</h1>
 
-<%= render 'form' %>
 
-<%= link_to 'View', @student %> |
-<%= link_to 'Back', students_path %>
-</center>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4"><h1>Update Records</h1></div>
+		<div class="col-md-4"></div>
+		
+		
+	</div>
+	
+	<div class="row">
+	
+	<div class="col-md-4"></div>
+	<div class="col-md-4"><%= render 'form' %></div>
+	<div class="col-md-4"></div>
+</div>
+<div class="row">
+	
+	<div class="col-md-4"></div>
+	<div class="col-md-4"><%= link_to 'View', @student %> |
+<%= link_to 'Back', students_path %></div>
+	<div class="col-md-4"></div>
+</div>
+
+</div>
