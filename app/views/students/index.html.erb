@@ -27,7 +27,7 @@
         <td><%= student.first_name %></td>
         <td><%= student.username %></td>
         <td><%= student.password %></td>
-        <!-- <td><%= link_to 'Results', results_path(student) %></td> -->
+      
         <td><%= link_to 'View', student %></td>
         <td><%= link_to 'Update', edit_student_path(student) %></td>
         <td><%= link_to 'Delete', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>

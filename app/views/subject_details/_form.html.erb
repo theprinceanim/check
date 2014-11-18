@@ -11,23 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :subject_code %><br>
-    <%= f.text_field :subject_code %>
+  <div class="form-group">
+  
+    Subject Code <%= f.text_field :subject_code, class: 'form-control', placeholder: 'Subject code' %>
   </div>
-  <div class="field">
-    <%= f.label :subject_name %><br>
-    <%= f.text_field :subject_name %>
+  
+  <div class="form-group">
+   
+    Subject name <%= f.text_field :subject_name, class: 'form-control', placeholder: 'Subject name' %>
   </div>
-  <div class="field">
-    <%= f.label :mark %><br>
-    <%= f.text_field :mark %>
+
+  <div class="form-group">
+  
+    Mark <%= f.text_field :mark, class: 'form-control', placeholder: 'Mark' %>
   </div>
-  <div class="field">
-    <%= f.label :grade %><br>
-    <%= f.number_field :grade %>
+
+  <div class="form-group">
+    
+    Grade <%= f.number_field :grade, class: 'form-control', placeholder: 'Grade' %>
   </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit", :class => 'btn btn-primary block' %>
   </div>
 <% end %>
+
+
+
+
+
+

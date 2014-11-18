@@ -1,6 +1,23 @@
-<h1>Editing Subject Detail</h1>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @subject_detail %> |
-<%= link_to 'Back', subject_details_path %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4"><h1>Editing Subject Records</h1></div>
+		<div class="col-md-4"></div>
+		
+		
+	</div>
+	
+	<div class="row">
+	
+	<div class="col-md-4"></div>
+	<div class="col-md-4"><%= render 'form' %></div>
+	<div class="col-md-4"></div>
+</div>
+<div class="row">
+	
+	<div class="col-md-4"></div>
+	<div class="col-md-4"><%= link_to 'View', @subject_detail %> |
+<%= link_to 'Back', subject_details_path %></div>
+	<div class="col-md-4"></div>
+</div>
