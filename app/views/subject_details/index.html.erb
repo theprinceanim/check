@@ -12,6 +12,7 @@
       <th>Subject name</th>
       <th>Mark</th>
       <th>Grade</th>
+         
       <th colspan="3"></th>
     </tr>
   
@@ -19,13 +20,14 @@
   <tbody>
     <% @subject_details.each do |subject_detail| %>
       <tr>
-        <td><%= subject_detail.subject_code %></td>
+        <td><%= subject_detail.subject_code%></td>
         <td><%= subject_detail.subject_name %></td>
         <td><%= subject_detail.mark %></td>
         <td><%= subject_detail.grade %></td>
-        <td><%= link_to 'Show', subject_detail %></td>
-        <td><%= link_to 'Edit', edit_subject_detail_path(subject_detail) %></td>
-        <td><%= link_to 'Destroy', subject_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      
+        <td><%= link_to 'Show', term_subject_detail_path(@term, subject_detail) %></td>
+        <td><%= link_to 'Edit', edit_term_subject_detail_path(@term, subject_detail) %></td>
+        <td><%= link_to 'Destroy', term_subject_detail_path(@term, subject_detail), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -38,7 +40,7 @@
 
 
   <div class="col-xs-2">
-<%= link_to '<i class="glyphicon, glyphicon-plus"></i> New Subject details'.html_safe, new_subject_detail_path, class: 'btn btn-default btn-lg' %>
+<%= link_to '<i class="glyphicon, glyphicon-plus"></i> New Subject details'.html_safe, new_term_subject_detail_path(@term), class: 'btn btn-default btn-lg' %>
 
     
   </div>

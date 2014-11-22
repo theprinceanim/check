@@ -1,8 +1,11 @@
 
+
+
+
 <div class="container">
 	<div class="row">
 		<div class="col-md-4"></div>
-		<div class="col-md-4"><h1>Editing Subject Records</h1></div>
+		<div class="col-md-4"><h1>Editing Term</h1></div>
 		<div class="col-md-4"></div>
 		
 		
@@ -17,7 +20,7 @@
 <div class="row">
 	
 	<div class="col-md-4"></div>
-	<div class="col-md-4"><%= link_to 'View', term_subject_detail_path(@term, @subject_detail) %> |
-<%= link_to 'Back', term_subject_details_path(@term) %></div>
+	<div class="col-md-4"><%= link_to 'View', @term %> |
+<%= link_to 'Back', terms_path %></div>
 	<div class="col-md-4"></div>
 </div>

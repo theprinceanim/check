@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Term:</strong>
+  <%= @term.term %>
+</p>
+
+<%= link_to 'Display Result', term_subject_details_path(@term) %> |
+<%= link_to 'Back', terms_path %>

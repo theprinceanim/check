@@ -11,18 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141117133728) do
-
-  create_table "results", force: true do |t|
-    t.string   "subject_code"
-    t.string   "subject_name"
-    t.decimal  "mark"
-    t.integer  "student_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  add_index "results", ["student_id"], name: "index_results_on_student_id"
+ActiveRecord::Schema.define(version: 20141119112918) do
 
   create_table "students", force: true do |t|
     t.integer  "exams_number"
@@ -39,8 +28,17 @@ ActiveRecord::Schema.define(version: 20141117133728) do
     t.string   "subject_name"
     t.decimal  "mark"
     t.integer  "grade"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "term_id"
+  end
+
+  add_index "subject_details", ["term_id"], name: "index_subject_details_on_term_id"
+
+  create_table "terms", force: true do |t|
+    t.string   "term"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
