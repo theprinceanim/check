@@ -1,6 +1,6 @@
 class SubjectDetail < ActiveRecord::Base
-	attr_accessor :term, :term_id
-	belongs_to :term
+	attr_accessor :student, :student_id
+	belongs_to :student
 
 	validates_presence_of :subject_code, :subject_name, :mark, :grade
 

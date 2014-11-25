@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141119112918) do
+ActiveRecord::Schema.define(version: 20141124190335) do
+
+  create_table "classrooms", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "students", force: true do |t|
     t.integer  "exams_number"
@@ -21,7 +27,10 @@ ActiveRecord::Schema.define(version: 20141119112918) do
     t.datetime "updated_at",   null: false
     t.string   "username"
     t.string   "password"
+    t.integer  "term_id"
   end
+
+  add_index "students", ["term_id"], name: "index_students_on_term_id"
 
   create_table "subject_details", force: true do |t|
     t.string   "subject_code"
@@ -30,15 +39,18 @@ ActiveRecord::Schema.define(version: 20141119112918) do
     t.integer  "grade"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "term_id"
+    t.integer  "student_id"
   end
 
-  add_index "subject_details", ["term_id"], name: "index_subject_details_on_term_id"
+  add_index "subject_details", ["student_id"], name: "index_subject_details_on_student_id"
 
   create_table "terms", force: true do |t|
     t.string   "term"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "classroom_id"
   end
+
+  add_index "terms", ["classroom_id"], name: "index_terms_on_classroom_id"
 
 end

@@ -28,9 +28,12 @@
         <td><%= student.username %></td>
         <td><%= student.password %></td>
       
-        <td><%= link_to 'View', student %></td>
-        <td><%= link_to 'Update', edit_student_path(student) %></td>
-        <td><%= link_to 'Delete', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+
+        <td><%= link_to 'Results', student_subject_details_path(student, @subject_detail) %></td>
+        <td><%= link_to 'Update', edit_term_student_path(@term, student) %></td>
+        <td><%= link_to 'Delete', term_student_path(@term, student), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= link_to 'View Result', student_subject_details_path(@student, @subject_detail) %></td>
         </tr>
     <% end %>
   </tbody>
@@ -45,13 +48,15 @@
 
 
   <div class="col-xs-2">
-<%= link_to '<i class="glyphicon, glyphicon-plus"></i> New Student'.html_safe, new_student_path, class: 'btn btn-default btn-lg' %>
+<%= link_to '<i class="glyphicon, glyphicon-plus"></i> New Student'.html_safe, new_term_student_path(@term), class: 'btn btn-default btn-lg' %>
+    <br>
+   
 
-    
+    <%= link_to '<< Back'.html_safe, terms_path, class: 'btn btn-default btn-lg' %>
   </div>
 </div>
 </div>
 
-  
+
 
 

@@ -25,9 +25,10 @@
   <%= @subject_detail.grade %>
 </p>
 
-<%= link_to 'Edit', edit_term_subject_detail_path(@term, @subject_detail) %> |
-<%= link_to 'Back', term_subject_details_path(@term) %>|
-<%= link_to 'Add another Subject', new_term_subject_detail_path(@term) %>
+<%= link_to 'Edit', edit_student_subject_detail_path(@student, @subject_detail) %>
+|
+<%= link_to 'Back', student_subject_details_path(@student) %>|
+<%= link_to 'Add another Subject', new_student_subject_detail_path(@student) %>
 
 </div>
 <div class="col-xs-4" style="color:#34495E;">

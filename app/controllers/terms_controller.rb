@@ -5,12 +5,17 @@ class TermsController < ApplicationController
   # GET /terms.json
   def index
     @terms = Term.all
+    # respond_to do |format|
+    #   format.html
+    #   format.xml { render :xml => @terms }
+    # end
   end
+
 
   # GET /terms/1
   # GET /terms/1.json
   def show
-    
+    # @term = @classroom.terms.find params[:id]
   end
 
   # GET /terms/new
@@ -65,7 +70,7 @@ class TermsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_term
-      @term = Term.find(params[:id])
+      @term = Term.find (params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

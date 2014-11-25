@@ -1,9 +1,25 @@
+<div class="container">
+<div class="row">
+<div class="col-xs-4">
 <p id="notice"><%= notice %></p>
+
 
 <p>
   <strong>Term:</strong>
-  <%= @term.term %>
+ <%= @term.term %>
+  
 </p>
 
-<%= link_to 'Display Result', term_subject_details_path(@term) %> |
-<%= link_to 'Back', terms_path %>
+
+<%= link_to 'View Students', term_students_path(@term, @student) %> |
+<%= link_to 'Back', terms_path %>|
+<%= link_to 'Add another Term', new_term_path(@term) %>
+
+</div>
+<div class="col-xs-4" style="color:#34495E;">
+
+</div>
+
+<div class="col-xs-4"></div>
+</div>
+</div>

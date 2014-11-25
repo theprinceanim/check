@@ -1,20 +1,31 @@
 Rails.application.routes.draw do
+  # resources :classrooms
+
   # resources :terms
 
   #resources :subject_details
 
  
 
-  resources :students
+  # resources :students
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'terms#index'
-  resources :terms do
-    resources :subject_details
+  # resources :classrooms do
+    resources :students do
+      resources :subject_details do
+        # member do
+        #   get 'show'
+        # end
+    end
   end 
+
+  resources :terms  do
+    resources :students
+    end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

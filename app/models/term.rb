@@ -1,5 +1,8 @@
 class Term < ActiveRecord::Base
-	has_many :subject_details
+	# attr_accessor :name, :classroom_id
+	
+
+	has_many :students
 
 	validates :term, presence: true
 end
