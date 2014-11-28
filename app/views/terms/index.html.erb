@@ -21,8 +21,8 @@
         <td><%= term.term %></td>
         <td><%= link_to 'View Students', term_students_path(term, @student) %></td>
         <!-- <td><%#= link_to 'Show', term_path(term) %></td> -->
-        <td><%= link_to 'Edit', edit_term_path(term) %></td>
-        <td><%= link_to 'Destroy', term_path(term), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_classroom_term_path(@classroom, term) %></td>
+        <td><%= link_to 'Destroy', classroom_term_path(@classroom, term), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -35,7 +35,9 @@
 
 
   <div class="col-xs-2">
-<%= link_to '<i class="glyphicon, glyphicon-plus"></i> New Term'.html_safe, new_term_path, class: 'btn btn-default btn-lg' %>
+<%= link_to '<i class="glyphicon, glyphicon-plus"></i> New Term'.html_safe, new_classroom_term_path(@classroom), class: 'btn btn-default btn-lg' %>
+
+<%= link_to '<< Back'.html_safe, classrooms_path, class: 'btn btn-default btn-lg' %>
 
     
   </div>

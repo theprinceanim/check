@@ -1,0 +1,138 @@
+/* General */
+
+body {
+  background: #34495E;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+}
+
+form {
+  background-color: #FEF5C8;
+  background-repeat: no-repeat;
+  color: #666;
+  text-align: center;
+  width: 285px;
+  padding-top: 42px;
+  margin: 50px auto;
+  border-radius: 4px;
+}
+
+.header {
+  color: #34495E;
+  font-weight: 700;
+  font-size: 28px;
+  padding-bottom: 15px;
+}
+
+.optional {
+  display: inline-block;
+  background: F2F3F5;
+}
+
+#space {
+  padding: 1em;
+}
+
+#checking{
+  color: white;
+  font-family: verdana;
+  font-size: 48px;
+  
+}
+
+.footer {
+  background: #F2F2F2;
+  height: 45px;
+  border-radius: 0 0 4px 4px;
+  font-size: 12px;
+  margin-top: 88px;
+  padding-top: 3px;
+}
+
+.footer span {
+  color: #F54327;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: black;
+}
+
+
+
+/* Fields and Button */
+
+.button {
+  width: 80%;
+  height: 42px;
+  margin: 13px 0px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  background: #F2F3F5;
+  background-repeat: no-repeat;
+  background-position: 15px 17px;
+  text-indent: 17%;
+  font-family: inherit;
+  font-size: 16px;
+  color: #737373;
+}
+
+#submit {
+  background-color: #34495E;
+  font-size: 24px;
+  font-family: inherit;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 8px;
+  text-indent: 0;
+  cursor: pointer;
+  transition: background .3s ease-in-out;
+}
+
+#submit:hover {
+  background-color: #FF7145;
+}
+
+
+
+/* Username & Password Icons */
+
+#username {
+  background-image: url('http://static.tumblr.com/mnsbkhd/24dms3lei/male.png');
+}
+
+#password {
+  background-image: url('http://static.tumblr.com/mnsbkhd/5IMms3ldm/locked.png');
+}
+
+
+
+/* Checkbox */
+
+input[type='checkbox'] {
+ 
+}
+
+input[type='checkbox'] + label span {
+  display: inline-block;
+  background: inherit;
+  border: 2px solid #34495E;
+  border-radius: 35%;
+  margin: -1px 4px 0 0;
+  width: 10px;
+  height: 10px;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: background .3s ease-in-out;
+}
+
+input[type='checkbox']:checked + label span {
+  background: #34495E;
+  border: 2px solid #34495E;
+}

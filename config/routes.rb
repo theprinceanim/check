@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  # resources :classrooms
+ 
 
+  devise_for :users
   # resources :terms
 
   #resources :subject_details
@@ -13,7 +14,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'terms#index'
+  root 'classrooms#index'
   # resources :classrooms do
     resources :students do
       resources :subject_details do
@@ -26,6 +27,11 @@ Rails.application.routes.draw do
   resources :terms  do
     resources :students
     end
+
+   resources :classrooms do
+    resources :terms 
+  end
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

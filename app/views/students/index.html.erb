@@ -50,9 +50,9 @@
   <div class="col-xs-2">
 <%= link_to '<i class="glyphicon, glyphicon-plus"></i> New Student'.html_safe, new_term_student_path(@term), class: 'btn btn-default btn-lg' %>
     <br>
-   
+   <%= link_to '<< Back'.html_safe, url_for(:back), class: 'btn btn-default btn-lg' %>
 
-    <%= link_to '<< Back'.html_safe, terms_path, class: 'btn btn-default btn-lg' %>
+    <%#= link_to '<< Back'.html_safe, terms_path, class: 'btn btn-default btn-lg' %>
   </div>
 </div>
 </div>
